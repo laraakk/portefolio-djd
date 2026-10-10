@@ -1,0 +1,86 @@
+/* ═══════════════════════════════════════════════════════
+   Exercício 1 — Barra de navegação (Flexbox)
+   O reset e o estilo do conteúdo já estão feitos.
+   A tua tarefa começa mais abaixo, na secção "A TUA TAREFA".
+   ═══════════════════════════════════════════════════════ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #1E293B;
+}
+
+main {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+main h1 {
+  color: #1F3864;
+  margin-bottom: 1rem;
+}
+
+main p {
+  margin-bottom: 0.8rem;
+}
+
+main ul {
+  margin: 0.5rem 0 1rem 1.5rem;
+}
+
+main li {
+  margin-bottom: 0.3rem;
+}
+
+main code {
+  background: #DBEAFE;
+  color: #2E75B6;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.hint {
+  background: #F0FDF4;
+  border-left: 4px solid #16A34A;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   A TUA TAREFA — completa as regras abaixo
+   ═══════════════════════════════════════════════════════ */
+
+nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem 2rem;
+ background: #1F3864;
+}
+
+.logo {
+ color: white;
+ font-weight: bold;
+}
+
+.links {
+ display: flex;
+ gap: 1.5rem;
+}
+
+.links a {
+ color: #93C5FD;
+ text-decoration: none;
+}

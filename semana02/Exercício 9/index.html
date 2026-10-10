@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafio 4 — HUD de Jogo (Flexbox)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <h1>🕹️ Exercicio — HUD de Jogo</h1>
+
+  <p>O HTML desta página já está pronto — não precisas de mexer nele. A tua tarefa é completar o ficheiro <code>style.css</code> para transformar a barra abaixo (<code>&lt;div class="hud"&gt;</code>) num HUD (Head-Up Display) de jogo:</p>
+
+  <ul>
+    <li>Barra de vidas à esquerda, pontuação ao centro, tempo restante à direita — tudo na mesma linha</li>
+    <li>Os três grupos alinhados ao centro na vertical</li>
+    <li>Fundo escuro semitransparente, para se sobrepor ao jogo sem o esconder por completo</li>
+    <li>Texto a branco, bem legível sobre o fundo escuro</li>
+  </ul>
+
+  <p>Abre o <code>style.css</code> e procura os comentários <code>/* TODO */</code> — é aí que tens de escrever CSS.</p>
+
+  <div class="hint">
+    💡 Este é exatamente o tipo de componente que vais usar à volta do canvas de um jogo feito em Phaser 3 — o HUD fica por cima do jogo, não dentro dele. Se ficares preso, revê no guião "CSS Avançado" o Desafio 4 (secção "Desafios de Auto-estudo").
+  </div>
+</main>
+
+<div class="jogo">
+  <div class="hud">
+    <div class="hud-grupo">❤️❤️❤️</div>
+    <div class="hud-grupo">🏆 1240</div>
+    <div class="hud-grupo">⏱️ 01:23</div>
+  </div>
+  <div class="canvas-placeholder">🎮 Aqui ficaria o &lt;canvas&gt; do jogo (Phaser 3)</div>
+</div>
+
+</body>
+</html>

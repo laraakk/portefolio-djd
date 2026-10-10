@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício — Galeria de Jogos (Grid)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <h1>Exercício 2 — Galeria de Jogos</h1>
+
+  <p>O HTML desta página já está pronto — não precisas de mexer nele. A tua tarefa é completar o ficheiro <code>style.css</code> para transformar a lista de cards abaixo (<code>&lt;div class="galeria"&gt;</code>) numa galeria responsiva:</p>
+
+  <ul>
+    <li>Os cards organizam-se automaticamente em colunas, lado a lado</li>
+    <li>Ao encolher a janela do browser, o número de colunas ajusta-se sozinho — sem escrever nenhuma media query</li>
+    <li>Cada card tem fundo branco, cantos arredondados e uma sombra subtil, destacando-se do fundo da página</li>
+  </ul>
+
+  <p>Abre o <code>style.css</code> e procura os comentários <code>/* TODO */</code> — é aí que tens de escrever CSS. Usa o CSS Grid (<code>display: grid</code>) que praticaste no guião.</p>
+
+  <div class="hint">
+    💡 Se ficares preso, revê no guião "CSS Avançado" a secção 2 (CSS Grid) — a combinação <code>repeat(auto-fit, minmax(...))</code> é o que resolve o TODO 2, o mais importante deste exercício.
+  </div>
+</main>
+
+<div class="galeria">
+  <div class="card">
+    <div class="card-img">🏔️</div>
+    <h2>Celeste</h2>
+    <p>Plataformas exigente, com salto e dash muito precisos.</p>
+  </div>
+  <div class="card">
+    <div class="card-img">⛏️</div>
+    <h2>Minecraft</h2>
+    <p>Sandbox de construção e exploração em mundo aberto.</p>
+  </div>
+  <div class="card">
+    <div class="card-img">🪂</div>
+    <h2>Fortnite</h2>
+    <p>Battle royale gratuito com construção em tempo real.</p>
+  </div>
+  <div class="card">
+    <div class="card-img">🌾</div>
+    <h2>Stardew Valley</h2>
+    <p>Simulação de quinta, pesca e vida numa vila pacata.</p>
+  </div>
+  <div class="card">
+    <div class="card-img">⚔️</div>
+    <h2>Hades</h2>
+    <p>Roguelike de ação rápido, com histórias que evoluem a cada tentativa.</p>
+  </div>
+  <div class="card">
+    <div class="card-img">🌀</div>
+    <h2>Portal 2</h2>
+    <p>Puzzles de física engenhosos com um canhão de portais.</p>
+  </div>
+</div>
+
+</body>
+</html>

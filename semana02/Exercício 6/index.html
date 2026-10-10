@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercício — Painel de Estatísticas (Media Queries)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <h1>📊 Painel de Estatísticas</h1>
+
+  <p>O HTML desta página já está pronto — não precisas de mexer nele. A tua tarefa é completar o ficheiro <code>style.css</code> para que o painel de estatísticas (<code>&lt;div class="stats"&gt;</code>) se comporte assim:</p>
+
+  <ul>
+    <li>No telemóvel (ecrã estreito): os cards aparecem numa única coluna</li>
+    <li>No tablet (a partir de 640px de largura): os cards passam a 2 colunas</li>
+    <li>No computador (a partir de 1024px de largura): os cards passam a 3 colunas</li>
+    <li>O título "📊 Painel de Estatísticas" ajusta o tamanho da letra suavemente ao tamanho do ecrã — sem nenhuma media query</li>
+  </ul>
+
+  <p>Ao contrário do Exercício 2 (onde o número de colunas se ajustava sozinho com <code>auto-fit</code>), aqui vais escrever tu os pontos de quebra (<em>breakpoints</em>) com <code>@media</code> — a técnica clássica para controlar exatamente quando o layout muda.</p>
+
+  <p>Abre o <code>style.css</code> e procura os comentários <code>/* TODO */</code> — é aí que tens de escrever CSS.</p>
+
+  <div class="hint">
+    💡 Se ficares preso, revê no guião "CSS Avançado" a secção 3 (Layout Responsivo) — tens lá o exemplo exato de media queries mobile-first, e a fórmula <code>clamp()</code> para o título.
+  </div>
+</main>
+
+<div class="stats">
+  <div class="card"><div class="card-icon">🏆</div><div class="card-value">42</div><div class="card-label">Vitórias</div></div>
+  <div class="card"><div class="card-icon">❤️</div><div class="card-value">3</div><div class="card-label">Vidas</div></div>
+  <div class="card"><div class="card-icon">⭐</div><div class="card-value">17</div><div class="card-label">Nível</div></div>
+  <div class="card"><div class="card-icon">🪙</div><div class="card-value">1280</div><div class="card-label">Moedas</div></div>
+  <div class="card"><div class="card-icon">⏱️</div><div class="card-value">6h 45m</div><div class="card-label">Tempo Jogado</div></div>
+  <div class="card"><div class="card-icon">🎯</div><div class="card-value">9</div><div class="card-label">Conquistas</div></div>
+</div>
+
+</body>
+</html>
