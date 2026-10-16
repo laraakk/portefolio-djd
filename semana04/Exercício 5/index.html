@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h1>Exercício 5</h1>
+    <script>
+        let heroi = { nome: "Bruno", hp: 60, hpMax: 100, vivo: true };
+        function curar(personagem, quantidade) {
+            personagem.hp = Math.min(personagem.hp + quantidade, personagem.hpMax);
+            return personagem;
+        }
+        function receberDano(personagem, dano) {
+            personagem.hp = Math.max(personagem.hp - dano, 0);
+            if (personagem.hp === 0) {
+                personagem.vivo = false;
+            }
+            return personagem;
+        }
+        //Testes
+        curar(heroi, 25);
+        console.log(heroi.nome, heroi.hp, heroi.vivo);
+        curar(heroi, 50);
+        console.log(heroi.nome, heroi.hp, heroi.vivo);
+        receberDano(heroi, 120);
+        console.log(heroi.nome, heroi.hp, heroi.vivo);
+    </script>
+</body>
+</html>

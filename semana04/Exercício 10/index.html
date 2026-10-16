@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h1>Exercício 10</h1>
+    <script>
+       let missoes = [{ titulo: "Salvar a aldeia", recompensa: 100, concluida: true }, { titulo: "Encontrar o mapa", recompensa: 50, concluida: false }, { titulo: "Derrotar o Troll", recompensa: 200, concluida: false }, { titulo: "Entregar a carta", recompensa: 30, concluida: true }];
+       function totalRecompensas(lista) {
+        let total = 0;
+        for (let missao of lista) {
+                if (missao.concluida) {
+                    total = total + missao.recompensa;
+                }
+            }
+            return total;
+       }
+       function missoesPendentes(lista) {
+        let pendentes = [];
+        for (let missao of lista) {
+                if (!missao.concluida) {
+                    pendentes.push(missao.titulo);
+                }
+            }
+            return pendentes;
+       }
+       function concluirMissao(lista, titulo) {
+        for (let missao of lista) {
+                if (missao.titulo === titulo) {
+                    missao.concluida = true;
+                    return true;
+                }
+            }
+            return false;
+       }
+       console.log("Moedas:", totalRecompensas(missoes));
+       for (let missao of missoesPendentes(missoes)) {
+        console.log("Pendente:", missao);
+       }
+       console.log(concluirMissao(missoes, "Derrotar o Troll"));
+       console.log(concluirMissao(missoes, "Voar"));
+       console.log("Moedas:", totalRecompensas(missoes));
+       console.log("Pendentes:", missoesPendentes(missoes).length);
+    </script>
+</body>
+</html>

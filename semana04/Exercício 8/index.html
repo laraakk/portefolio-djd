@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h1>Exercício 8</h1>
+    <script>
+        let danos = [12, 30, 7, 25, 18];
+        function danoTotal(lista) {
+            let total = 0;
+            for (let dano of lista) {
+            total = total + dano;
+        }
+        return total;
+        }
+        function maiorDano(lista) {
+           let maior = lista[0];
+           for (let dano of lista) {
+            if (dano > maior) {
+                maior = dano;
+            }
+        }
+        return maior; 
+        }
+        function danoMedio(lista) {
+            return danoTotal(lista) / lista.length;
+        }
+        console.log("Total: ", danoTotal(danos));
+        console.log("Maior: ", maiorDano(danos));
+        console.log("Média: ", danoMedio(danos));
+    </script>
+</body>
+</html>

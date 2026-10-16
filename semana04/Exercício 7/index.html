@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h1>Exercício 7</h1>
+    <script>
+       let pontos = [100, 250, 80, 310];
+       let contador = 0;
+       for (let i = 0; i < pontos.length; i++) {
+            console.log("Jogador " + (i + 1) + " : " + pontos[i] + " pontos");
+            if (pontos[i] > 200) {
+                contador++;
+            }
+        }
+        console.log("Acima de 200 :", contador);
+    </script>
+</body>
+</html>

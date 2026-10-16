@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1>Exercício 3</h1>
+    <script>
+        let hotbar = ["Espada", "Arco", "Poção"];
+        function itemNoSlot(barra, slot) {
+           if (barra[slot] === undefined) {
+            return "Slot vazio";
+           }
+           return barra[slot];
+        }
+        function trocarItem(barra, slot, novoItem) {
+            let antigo = itemNoSlot(barra, slot);
+            console.log("Slot " + slot + " : " + antigo + " → " + novoItem);
+            barra[slot] = novoItem;
+            return barra;
+        }
+        //Testes
+        console.log(itemNoSlot(hotbar, 0));
+        console.log(itemNoSlot(hotbar, 5));
+        trocarItem(hotbar, 1, "Machado");
+
+        console.log(hotbar.length);
+    </script>
+</body>
+</html>

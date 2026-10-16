@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <h1>Exercício 9</h1>
+    <script>
+        let inimigos = [{ nome: "Goblin", hp: 30 }, { nome: "Troll", hp: 0 }, { nome: "Dragão", hp: 200 }, { nome: "Orc", hp: 45 }];
+        function contarVivos(lista) {
+            let contador = 0;
+            for (let inimigo of lista) {
+                if (inimigo.hp > 0) {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+        function ataqueEmArea(lista, dano) {
+            for (let inimigo of lista) {
+                if (inimigo.hp > 0) {
+                    inimigo.hp = Math.max(inimigo.hp - dano, 0);
+                }
+            }
+            return lista;
+        }
+        function mostrarInimigos(lista) {
+            for (let inimigo of lista) {
+                console.log(inimigo.nome + " : " + inimigo.hp);
+            }
+        }
+        console.log("Vivos: ", contarVivos(inimigos));
+        ataqueEmArea(inimigos, 40);
+        mostrarInimigos(inimigos);
+        console.log("Vivos: ", contarVivos(inimigos));
+    </script>
+</body>
+</html>

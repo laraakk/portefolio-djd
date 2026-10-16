@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h1>Exercício 4</h1>
+    <script>
+        let jogador = {nome: "Aria", hp: 100, ataque: 15, nivel: 3, vivo: true};
+        console.log(jogador.nome + " - nível " + jogador.nivel);
+        jogador.hp = jogador.hp - 30;
+        jogador.nivel = jogador.nivel + 1;
+        console.log("HP: " + jogador.hp + " | Nível: " + jogador.nivel);
+        let prop = "ataque";
+        console.log(prop + " = " + jogador[prop]);
+    </script>
+</body>
+</html>
