@@ -1,0 +1,158 @@
+/* ═══════════════════════════════════════════════════════════════
+   Desenvolvimento de Jogos Digitais · LEEC · ISE/UAlg
+   Ficha · Arena de Treino — JavaScript e DOM
+   ═══════════════════════════════════════════════════════════════ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0F172A;
+    color: #E2E8F0;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    color: #38BDF8;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.grelha-tarefas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 1.2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cartao {
+    background: #1E293B;
+    border: 2px solid #334155;
+    border-radius: 14px;
+    padding: 1.2rem 1.4rem;
+}
+
+.cartao h2 {
+    font-size: 1rem;
+    color: #FBBF24;
+    margin-bottom: 1rem;
+}
+
+p { margin: 0.6rem 0; }
+
+.dica { font-size: 0.8rem; color: #64748B; }
+
+.botoes { display: flex; gap: 0.8rem; }
+
+button {
+    padding: 0.5rem 1.1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: #2563EB;
+    color: white;
+}
+
+button:active { transform: scale(0.96); }
+
+/* ── Tarefa 1 · Barra de vida ─────────────────────────────── */
+.barra-fundo {
+    width: 100%;
+    height: 22px;
+    background: #334155;
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+#barra-vida {
+    width: 100%;
+    height: 100%;
+    background-color: #22C55E;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#btn-dano  { background: #DC2626; }
+#btn-pocao { background: #16A34A; }
+
+/* ── Tarefa 2 · Inventário ────────────────────────────────── */
+#painel-inventario {
+    margin-top: 0.8rem;
+    background: #0F172A;
+    border: 1px dashed #475569;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+}
+
+/* Classe usada para esconder um elemento */
+.escondido { display: none; }
+
+/* ── Tarefa 3 · Arena ─────────────────────────────────────── */
+#arena {
+    position: relative;
+    width: 404px;   /* 400 px úteis + 2 px de borda de cada lado */
+    height: 60px;
+    background: #0F172A;
+    border: 2px solid #475569;
+    border-radius: 8px;
+}
+
+#heroi {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    line-height: 40px;
+    text-align: center;
+    transition: left 0.1s;
+}
+
+/* ── Tarefa 4 · Nome ──────────────────────────────────────── */
+#nome-input {
+    padding: 0.5rem 0.7rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    background: #0F172A;
+    color: #E2E8F0;
+    width: 100%;
+}
+
+#contador { font-size: 0.85rem; color: #94A3B8; }
+
+/* Classe adicionada quando o nome está quase no limite */
+.aviso { color: #F59E0B !important; font-weight: bold; }
+
+/* ── Tarefa 5 · Lista ─────────────────────────────────────── */
+#lista-itens { list-style: none; margin-bottom: 0.4rem; }
+#lista-itens li {
+    padding: 0.3rem 0.6rem;
+    border-bottom: 1px solid #334155;
+}
+#total-itens { color: #FBBF24; font-weight: bold; }
+
+/* ── Tarefa 6 · Baús ──────────────────────────────────────── */
+#grelha-baus {
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    gap: 0.5rem;
+}
+
+.bau {
+    width: 70px;
+    height: 60px;
+    font-size: 1.8rem;
+    background: #78350F;
+}
+
+/* Classe adicionada a um baú depois de ser aberto */
+.aberto {
+    background: #334155;
+    cursor: default;
+}

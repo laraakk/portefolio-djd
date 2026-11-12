@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Arena de Treino — DJD</title>
+  <link rel="stylesheet" href="ArenaTreino.css">
+</head>
+<body>
+  <h1>⚔️ Arena de Treino — JavaScript e DOM</h1>
+
+  <main class="grelha-tarefas">
+
+    <!-- Tarefa 1 · Barra de vida -->
+    <section class="cartao" id="tarefa1">
+      <h2>1 · Barra de vida</h2>
+      <div class="barra-fundo"><div id="barra-vida"></div></div>
+      <p id="vida-texto">HP: ?</p>
+      <div class="botoes">
+        <button id="btn-dano">💥 Dano (-10)</button>
+        <button id="btn-pocao">🧪 Poção (+10)</button>
+      </div>
+    </section>
+
+    <!-- Tarefa 2 · Inventário escondido -->
+    <section class="cartao" id="tarefa2">
+      <h2>2 · Abrir e fechar o inventário</h2>
+      <button id="btn-inventario">🎒 Abrir inventário</button>
+      <div id="painel-inventario" class="escondido">
+        <p>⚔️ Espada · 🛡️ Escudo · 🧪 Poção</p>
+      </div>
+    </section>
+
+    <!-- Tarefa 3 · Mover o herói -->
+    <section class="cartao" id="tarefa3">
+      <h2>3 · Mover o herói com as setas</h2>
+      <div id="arena"><div id="heroi">🧙</div></div>
+      <p id="posicao-texto">Posição: 0</p>
+      <p class="dica">Usa as teclas ← e →</p>
+    </section>
+
+    <!-- Tarefa 4 · Nome do herói -->
+    <section class="cartao" id="tarefa4">
+      <h2>4 · Nome do herói</h2>
+      <input id="nome-input" type="text" maxlength="12" placeholder="Nome do herói">
+      <p id="saudacao">Escreve o nome do herói</p>
+      <p id="contador">0 / 12</p>
+    </section>
+
+    <!-- Tarefa 5 · Inventário a partir de um array -->
+    <section class="cartao" id="tarefa5">
+      <h2>5 · Lista do inventário</h2>
+      <ul id="lista-itens"></ul>
+      <p id="total-itens"></p>
+      <button id="btn-apanhar">✨ Apanhar Elmo</button>
+    </section>
+
+    <!-- Tarefa 6 · Caça ao tesouro -->
+    <section class="cartao" id="tarefa6">
+      <h2>6 · Caça ao tesouro</h2>
+      <div id="grelha-baus">
+        <button class="bau" id="bau-0">📦</button>
+        <button class="bau" id="bau-1">📦</button>
+        <button class="bau" id="bau-2">📦</button>
+        <button class="bau" id="bau-3">📦</button>
+        <button class="bau" id="bau-4">📦</button>
+        <button class="bau" id="bau-5">📦</button>
+        <button class="bau" id="bau-6">📦</button>
+        <button class="bau" id="bau-7">📦</button>
+        <button class="bau" id="bau-8">📦</button>
+      </div>
+      <p id="tesouro-estado">Tentativas restantes: 3</p>
+    </section>
+
+  </main>
+
+  <script src="ArenaTreino.js"></script>
+</body>
+</html>

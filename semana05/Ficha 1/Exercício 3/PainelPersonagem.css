@@ -1,0 +1,106 @@
+/* ═══════════════════════════════════════════════════════════════
+   Desenvolvimento de Jogos Digitais · LEEC · ISE/UAlg
+   Exercício Guiado · Painel de Personagem
+   ═══════════════════════════════════════════════════════════════ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0F172A;
+    color: #E2E8F0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    color: #38BDF8;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.painel {
+    background: #1E293B;
+    border: 2px solid #334155;
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    min-width: 340px;
+    text-align: center;
+}
+
+#hp-display {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #4ADE80;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+#estado-display {
+    font-size: 1rem;
+    color: #94A3B8;
+    margin-bottom: 0.4rem;
+    min-height: 1.6rem;
+}
+
+#tecla-display {
+    font-size: 0.85rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    font-family: 'Courier New', monospace;
+}
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+button {
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+button:active { transform: scale(0.96); }
+
+#btn-atacar {
+    background: #DC2626;
+    color: white;
+}
+
+#btn-atacar:hover { opacity: 0.85; }
+
+#btn-curar {
+    background: #16A34A;
+    color: white;
+}
+
+#btn-curar:hover { opacity: 0.85; }
+
+.dica {
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: #334155;
+    text-align: center;
+}
+
+/* Classe adicionada via classList.add() quando HP < 25 */
+.perigo {
+    color: #EF4444 !important;
+    animation: piscar 0.8s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+}
