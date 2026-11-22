@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesouros do Oceano</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌊%3C/text%3E%3C/svg%3E">
+
+    <style>
+        @font-face {
+            font-family: "Spectral";
+            src: url("assets/fonts/Spectral-Bold.ttf") format("truetype");
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #001F33;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+
+    <script src="phaser.min.js"></script>
+
+    <script>
+        document.fonts.load('700 22px "Spectral"').then(() => {
+            const script = document.createElement("script");
+            script.src = "game.js";
+            document.body.appendChild(script);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
